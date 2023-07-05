@@ -1,18 +1,32 @@
 import 'dart:io';
-    import 'dart:math';
+import 'dart:math';
 
+void main() {
+  final Random random = Random();
+  final int randomNumber = random.nextInt(100)+1;
 
-    void main() {
-       final Random random = Random ();
-       final int randomNumber = random.nextInt(100);
-       print (randomNumber);
-       int attempts=0;
-       int guess=0;
-       print ('Welcome to Guess the Number!');
-       print ('I have chosen a number between 1 and 100.');
-       print ('Can you guess the number?');
-       while (randomNumber!=guess) {
-         stdout.write ('Enter ')
-       }
-
+  int attempts = 0;
+  int? guess = 0;
+  print('Welcome to Guess the Number!');
+  print('I have chosen a number between 1 and 100.');
+  print('Can you guess the number?');
+  while (randomNumber != guess) {
+    stdout.write('Enter the guess:');
+    String? input = stdin.readLineSync();
+    print(input);
+    if (input == null) {
+      print('Please enter a number ');
+      continue;
     }
+    guess = int.tryParse(input);
+    if (guess! > randomNumber) {
+      print('Too high');
+    } else if (guess < randomNumber) {
+      print('Too low!');
+    } else {
+      print('Congratulations! You guessed the correct number in $attempts.');
+    }
+    attempts++;
+  }
+  print('Thanks for playing!');
+}
