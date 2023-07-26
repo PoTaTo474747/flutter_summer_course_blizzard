@@ -18,7 +18,7 @@ class WelcomePage extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              // const Padding(padding: EdgeInsets.only(top: 200)),
+              const Padding(padding: EdgeInsets.only(top: 200)),
               Expanded(
                 child: Column(
                   children: [
@@ -34,11 +34,11 @@ class WelcomePage extends StatelessWidget {
                     ),
                     GradientText("Game", 31.6),
                     Image(image: AssetImage('assets/iCodeGuy.png')),
-
+                    Expanded(child: GradientText('READY?', 25.0)),
                   ],
                 ),
               ),
-              Expanded(child: GradientText('READY?', 25.0)),
+
             ],
           ),
       ),
