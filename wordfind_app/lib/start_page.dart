@@ -1,6 +1,10 @@
 
+import 'dart:ui';
+
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:wordfind_app/gradient_text.dart';
+import 'package:wordfind_app/input_field.dart';
 
 class StartPage extends StatelessWidget {
   const StartPage({super.key});
@@ -39,6 +43,8 @@ class StartPage extends StatelessWidget {
               Padding(padding: EdgeInsets.only(top: 20),
               ),
               GradientText('Player Name', 20.0),
+              Padding(padding: EdgeInsets.only(top: 20) ),
+              InputField(),
               Padding(padding: EdgeInsets.only(top: 20),
               ),
             ],
