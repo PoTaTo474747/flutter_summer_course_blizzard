@@ -44,7 +44,7 @@ class StartPage extends StatelessWidget {
               ),
               GradientText('Player Name', 20.0),
               Padding(padding: EdgeInsets.only(top: 20) ),
-              InputField(),
+              InputField(onSubmitted: (String ) {  },),
               Padding(padding: EdgeInsets.only(top: 20),
               ),
             ],

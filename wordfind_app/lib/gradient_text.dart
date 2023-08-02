@@ -8,7 +8,6 @@ class GradientText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     return Text(text,
         style: TextStyle(
           fontSize: size,
