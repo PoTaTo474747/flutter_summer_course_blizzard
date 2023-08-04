@@ -48,10 +48,11 @@ class _InputFieldState extends State<InputField> {
             color: Color(0xFFE86B02),
           ),
           hintText: 'Your name',
-         hintStyle: TextStyle(color: Color(0xFFE86B02)),
+          hintStyle: TextStyle(color: Color(0xFFE86B02)),
           suffixIcon: IconButton(
             onPressed: () {
-              _textEditingController.clear();},
+              _textEditingController.clear();
+            },
             icon: Icon(Icons.clear, color: Color(0xFFE86B02)),
           ),
           border: OutlineInputBorder(

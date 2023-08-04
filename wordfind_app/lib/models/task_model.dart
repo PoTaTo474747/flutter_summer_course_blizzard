@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'char_model.dart';
 
 class TaskModel {
@@ -32,13 +30,15 @@ class TaskModel {
       return complete;
     }
     isFull = true;
-    String answeredString = puzzles.map((puzzle) => puzzle.currentValue).join("");
-    return answeredString== answer;
+    String answeredString =
+        puzzles.map((puzzle) => puzzle.currentValue).join("");
+    return answeredString == answer;
   }
-  TaskModel clone(){
+
+  TaskModel clone() {
     TaskModel task = TaskModel(
-      answer:answer,
-    pathImage: pathImage,
+      answer: answer,
+      pathImage: pathImage,
       question: question,
     );
     return task;
