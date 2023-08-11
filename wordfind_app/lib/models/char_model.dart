@@ -14,8 +14,10 @@ class CharModels {
     hintShow ? correctValue : null;
   }
 
-  clear() {
+  clearValue() {
     currentIndex = null;
     currentValue = null;
   }
+
+  void clear() {}
 }

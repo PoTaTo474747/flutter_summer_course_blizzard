@@ -16,4 +16,9 @@ List<TaskModel> questions = [
           'https://as1.ftcdn.net/v2/jpg/02/48/64/04/1000_F_248640483_5KAZi0GqcWrBu6GOhFEAxk1quNEuOzHJ.jpg',
       question: 'What is this animal name?',
       answer: 'Wolf'),
+  TaskModel(
+      pathImage: 'https://static.wikia.nocookie.net/jujutsu-kaisen/images/e/ef/Satoru_Gojo_%28Anime_2%29.png/revision/latest?cb=20201025013634',
+      question: 'Who is this?',
+      answer: 'Gojo')
+
 ];

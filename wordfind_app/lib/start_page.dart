@@ -1,11 +1,8 @@
 import 'dart:ui';
-
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:wordfind_app/gradient_text.dart';
 import 'package:wordfind_app/input_field.dart';
 import 'package:wordfind_app/task_page.dart';
-
 import 'models/user_model.dart';
 
 class StartPage extends StatefulWidget {
@@ -45,7 +42,8 @@ class _StartPageState extends State<StartPage> {
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-              image: AssetImage('assets/back2.png'), fit: BoxFit.cover),
+              image: AssetImage('assets/back2.png'),
+              fit: BoxFit.cover),
         ),
         child: Center(
           child: Column(
@@ -58,7 +56,8 @@ class _StartPageState extends State<StartPage> {
                 padding: EdgeInsets.only(top: 20),
               ),
               GradientText('Player Name', 20.0),
-              Padding(padding: EdgeInsets.only(top: 20)),
+              Padding(padding: EdgeInsets.only(top: 20)
+              ),
               InputField(
                 onSubmitted: (String value) {
                   _createUser(value);
