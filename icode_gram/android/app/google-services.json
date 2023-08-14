@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "262149112845",
+    "project_id": "icodegram-mungunuu",
+    "storage_bucket": "icodegram-mungunuu.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:262149112845:android:c3ce781d9cd8e2192e4144",
+        "android_client_info": {
+          "package_name": "com.example.icode_gram"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "262149112845-5mn2e0csnkqn2k2nf8b8f1kjuga9nb3k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLmVLxcym9nJ_IU73nKHxsK-boC9hpsQQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "262149112845-5mn2e0csnkqn2k2nf8b8f1kjuga9nb3k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
-import 'pages/login.dart';
+import 'package:icode_gram/pages/sign_up.dart';
+
+import 'package:firebase_core/firebase_core.dart';
 
 void main() {
-  runApp(MaterialApp(
-    home: Scaffold(
-      body: const Login(),
-    ),
+  WidgetsFlutterBinding.ensureInitialized();
+  Firebase.initializeApp();
+
+  runApp(const MaterialApp(
+    home: SignUp(),
   ));
 }

@@ -38,6 +38,9 @@ class _SignUpState extends State<SignUp> {
                 flex: 2,
                 child: Container(),
               ),
+              Text('iCodegram',
+
+              ),
               SizedBox(
                 height: 25,
               ),
