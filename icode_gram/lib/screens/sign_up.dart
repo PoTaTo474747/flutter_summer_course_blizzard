@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:icode_gram/resources/auth_method.dart';
 
 import '../compoment/text_feild.dart';
 
@@ -10,7 +11,7 @@ class SignUp extends StatefulWidget {
 }
 
 class _SignUpState extends State<SignUp> {
-  final TextEditingController _phoneNumberController = TextEditingController();
+  final TextEditingController _emailController = TextEditingController();
   final TextEditingController _userController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
   final TextEditingController _rePasswordController = TextEditingController();
@@ -19,7 +20,7 @@ class _SignUpState extends State<SignUp> {
   void dispose() {
     super.dispose();
     _passwordController.dispose();
-    _phoneNumberController.dispose();
+    _emailController.dispose();
     _userController.dispose();
     _rePasswordController.dispose();
   }
@@ -27,7 +28,6 @@ class _SignUpState extends State<SignUp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
       body: SafeArea(
         child: Container(
           padding: EdgeInsets.symmetric(horizontal: 32),
@@ -39,23 +39,23 @@ class _SignUpState extends State<SignUp> {
                 flex: 2,
                 child: Container(),
               ),
-           Text(
-            'iCodegram',
-            style: TextStyle(
-                fontFamily: 'Lobster',
-                color: Colors.white,
-                fontSize: 35.5,
-                fontWeight: FontWeight.w400
-            ),
-           ),
+              Text(
+                'iCodegram',
+                style: TextStyle(
+                    fontFamily: 'Lobster',
+                    color: Colors.white,
+                    fontSize: 35.5,
+                    fontWeight: FontWeight.w400,
+              ),
+              ),
               SizedBox(
                 height: 25,
               ),
               TextFeildInput(
-
-                hintText: 'Phone number',
+                hintText: 'Email ',
                 isPassword: false,
-                textEditingController: _phoneNumberController,
+                textEditingController: _emailController,
+                textInputType: TextInputType.emailAddress,
               ),
               SizedBox(
                 height: 25,
@@ -64,6 +64,7 @@ class _SignUpState extends State<SignUp> {
                 hintText: 'User name',
                 isPassword: false,
                 textEditingController: _userController,
+                textInputType: TextInputType.text,
               ),
               SizedBox(
                 height: 25,
@@ -72,6 +73,7 @@ class _SignUpState extends State<SignUp> {
                 hintText: 'Password',
                 isPassword: true,
                 textEditingController: _passwordController,
+                textInputType: TextInputType.text,
               ),
               SizedBox(
                 height: 25,
@@ -80,25 +82,29 @@ class _SignUpState extends State<SignUp> {
                 hintText: 'Password',
                 isPassword: true,
                 textEditingController: _rePasswordController,
+                textInputType: TextInputType.text,
               ),
               Flexible(
                 child: Container(),
                 flex: 2,
               ),
               InkWell(
-                onTap: () {},
+                onTap: () => {
+                  AuthMethods().signUpUser(
+                      email: _emailController.text,
+                      password: _passwordController.text,
+                      username: _userController.text)
+                },
                 child: Container(
                   width: double.infinity,
                   alignment: Alignment.center,
                   padding: EdgeInsets.symmetric(vertical: 12),
-                  child: Text('Sign up',
-
-                  ),
+                  child: Text('Sign up'),
                   decoration: ShapeDecoration(
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.all(Radius.circular(4)),
                       ),
-                      color: Colors.orange),
+                      color: Colors.blue),
                 ),
               ),
               SizedBox(
