@@ -69,7 +69,8 @@ class WelcomePage extends StatelessWidget {
                 fontWeight: FontWeight.w700,
               ),
             ),
-          )),
+          )
+      ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
   }
