@@ -1,0 +1,9 @@
+<svg width="75" height="75" viewBox="0 0 75 75" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path id="Inner Oval" d="M37.5 73.5C57.3823 73.5 73.5 57.3823 73.5 37.5C73.5 17.6177 57.3823 1.5 37.5 1.5C17.6177 1.5 1.5 17.6177 1.5 37.5C1.5 57.3823 17.6177 73.5 37.5 73.5Z" stroke="url(#paint0_linear_483_1442)" stroke-opacity="0.5" stroke-width="2"/>
+<defs>
+<linearGradient id="paint0_linear_483_1442" x1="71.7467" y1="32.5657" x2="-33.8255" y2="33.7315" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="#FEF5E8" stop-opacity="0.4"/>
+</linearGradient>
+</defs>
+</svg>

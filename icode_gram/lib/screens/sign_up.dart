@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:icode_gram/resources/auth_method.dart';
 
 import '../compoment/text_feild.dart';
+import 'login_screen.dart';
 
 class SignUp extends StatefulWidget {
   const SignUp({super.key});
@@ -28,6 +29,7 @@ class _SignUpState extends State<SignUp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       body: SafeArea(
         child: Container(
           padding: EdgeInsets.symmetric(horizontal: 32),
@@ -42,11 +44,11 @@ class _SignUpState extends State<SignUp> {
               Text(
                 'iCodegram',
                 style: TextStyle(
-                    fontFamily: 'Lobster',
-                    color: Colors.white,
-                    fontSize: 35.5,
-                    fontWeight: FontWeight.w400,
-              ),
+                  fontFamily: 'Lobster',
+                  color: Colors.white,
+                  fontSize: 35.5,
+                  fontWeight: FontWeight.w400,
+                ),
               ),
               SizedBox(
                 height: 25,
@@ -90,6 +92,8 @@ class _SignUpState extends State<SignUp> {
               ),
               InkWell(
                 onTap: () => {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => LoginScreen())),
                   AuthMethods().signUpUser(
                       email: _emailController.text,
                       password: _passwordController.text,

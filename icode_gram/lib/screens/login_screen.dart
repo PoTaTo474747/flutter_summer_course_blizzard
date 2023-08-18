@@ -1,6 +1,9 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:icode_gram/resources/auth_method.dart';
+import 'package:icode_gram/screens/sign_up.dart';
 
 import '../compoment/text_feild.dart';
 import 'home_screen.dart';
@@ -36,7 +39,7 @@ class _LoginScreenState extends State<LoginScreen> {
     if (result == 'success') {
       print('Logged in');
       setState(() {
-        _isLoading=false;
+        _isLoading = false;
       });
 
       Navigator.push(
@@ -51,7 +54,7 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      //backgroundColor: Colors.black,
+      backgroundColor: Colors.black,
       body: SafeArea(
         child: Container(
           padding: EdgeInsets.symmetric(horizontal: 32),
@@ -96,7 +99,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     alignment: Alignment.center,
                     padding: EdgeInsets.symmetric(vertical: 12),
                     decoration: ShapeDecoration(
-                      color: Colors.blue,
+                      color: Colors.orange,
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.all(Radius.circular(4))),
                     ),
@@ -104,10 +107,76 @@ class _LoginScreenState extends State<LoginScreen> {
                         ? Center(
                             child:
                                 CircularProgressIndicator(color: Colors.white))
-                        : Text('Enter'),
+                        : Text('Enter',
+                            style: TextStyle(
+                                color: Colors.white70,
+                                fontWeight: FontWeight.w400,
+                                fontSize: 15,
+                                fontFamily: 'Rubik')),
                   )),
               SizedBox(
                 height: 12,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Container(
+                    height: 1,
+                    width: 132,
+                    decoration: BoxDecoration(
+                        color: Colors.black,
+                        image: DecorationImage(
+                            image: AssetImage('assets/Line.png'))),
+                  ),
+                  Text(
+                    'or',
+                    style: TextStyle(
+                        fontWeight: FontWeight.w400,
+                        fontSize: 15,
+                        fontFamily: 'Rubik',
+                        color: Colors.white70),
+                  ),
+                  Container(
+                    height: 1,
+                    width: 132,
+                    decoration: BoxDecoration(
+                        color: Colors.black,
+                        image: DecorationImage(
+                            image: AssetImage('assets/Line.png'))),
+                  )
+                ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    'New here?',
+                    style: TextStyle(
+                      color: Colors.white70,
+                      fontWeight: FontWeight.w400,
+                      fontSize: 15,
+                      fontFamily: 'Rubik',
+                    ),
+                  ),
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => SignUp()));
+                      },
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.transparent,
+                        elevation: 0,
+                      ),
+                      child: Text(
+                        'Sign Up',
+                        style: TextStyle(
+                          color: Colors.orange,
+                          fontWeight: FontWeight.w400,
+                          fontSize: 15,
+                          fontFamily: 'Rubik',
+                        ),
+                      ))
+                ],
               ),
               Flexible(
                 flex: 2,

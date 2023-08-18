@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:icode_gram/screens/home_screen.dart';
 import 'package:icode_gram/screens/login_screen.dart';
 import 'package:icode_gram/screens/sign_up.dart';
 
@@ -9,6 +10,6 @@ void main() async {
   Firebase.initializeApp();
 
   runApp(const MaterialApp(
-    home: LoginScreen(),
+    home: HomeScreen(),
   ));
 }
