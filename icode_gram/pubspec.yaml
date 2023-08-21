@@ -66,9 +66,7 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/Line.png
-    - assets/Inner Oval.svg
-    - assets/Inner Oval.svg human edition.svg
+    - assets/images/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -85,12 +83,12 @@ flutter:
   fonts:
     - family: Lobster
       fonts:
-        - asset: assets/Lobster-Regular.ttf
+        - asset: assets/fonts/Lobster-Regular.ttf
     #       - asset: fonts/Schyler-Italic.ttf
     #         style: italic
     - family: Rubik
       fonts:
-        - asset: assets/Rubik-Italic-VariableFont_wght.ttf
+        - asset: assets/fonts/Rubik-Italic-VariableFont_wght.ttf
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
   #

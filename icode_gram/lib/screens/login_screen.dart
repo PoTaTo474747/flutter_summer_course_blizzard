@@ -126,7 +126,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     decoration: BoxDecoration(
                         color: Colors.black,
                         image: DecorationImage(
-                            image: AssetImage('assets/Line.png'))),
+                            image: AssetImage('assets/images/line.png'))),
                   ),
                   Text(
                     'or',
@@ -142,7 +142,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     decoration: BoxDecoration(
                         color: Colors.black,
                         image: DecorationImage(
-                            image: AssetImage('assets/Line.png'))),
+                            image: AssetImage('assets/images/line.png'))),
                   )
                 ],
               ),
