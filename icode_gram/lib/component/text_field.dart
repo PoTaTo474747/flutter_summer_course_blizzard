@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class TextFeildInput extends StatelessWidget {
+class TextFieldInput extends StatelessWidget {
   final String hintText;
 
   final bool isPassword;
@@ -8,7 +8,7 @@ class TextFeildInput extends StatelessWidget {
 
   final TextInputType textInputType;
 
-  const TextFeildInput(
+  const TextFieldInput(
       {super.key,
       required this.textEditingController,
       required this.hintText,

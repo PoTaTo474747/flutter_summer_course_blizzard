@@ -5,7 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:icode_gram/resources/auth_method.dart';
 import 'package:icode_gram/screens/sign_up.dart';
 
-import '../compoment/text_feild.dart';
+import '../component/text_field.dart';
 import 'home_screen.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -72,7 +72,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     fontWeight: FontWeight.w400),
               ),
               SizedBox(height: 64),
-              TextFeildInput(
+              TextFieldInput(
                 hintText: "Enter you're email",
                 isPassword: false,
                 textEditingController: _emailController,
@@ -81,7 +81,7 @@ class _LoginScreenState extends State<LoginScreen> {
               SizedBox(
                 height: 25,
               ),
-              TextFeildInput(
+              TextFieldInput(
                 hintText: "Enter you're password",
                 isPassword: true,
                 textEditingController: _passwordController,

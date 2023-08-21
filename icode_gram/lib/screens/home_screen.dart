@@ -1,5 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:icode_gram/component/story/add_story.dart';
+
+import '../component/story/watch_story.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -9,69 +12,37 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  late List<WatchStory> stories = [const WatchStory(name: 'PoTaTo47')];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
-      body: SafeArea(
-        child: Container(
-          padding: EdgeInsets.symmetric(horizontal: 32),
-          width: double.infinity,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                'iCodegram',
-                style: TextStyle(
-                    fontFamily: 'Lobster',
-                    color: Colors.white,
-                    fontSize: 25.6,
-                    fontWeight: FontWeight.w400),
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Container(
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      image: DecorationImage(
-                        image: AssetImage(
-                          'assets/images/inner_Oval.png',
-                        ),
-                      ),
-                    ),
-                  ),
-                  Stack(
-                    children: [
-                      Icon(
-                        Icons.add,
-                        color: Colors.white,
-                      ),
-                      Container(
-                        width: 18,
-                        height: 18,
-                      ),
-                    ],
-                  ),
-                  Text(
-                    'Add',
-                    style: TextStyle(
-                      fontSize: 12,
-                      fontWeight: FontWeight.w400,
-                    ),
-                  ),
-                  Container(
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                        image: AssetImage('assets/images/story.png'),
-                      ),
-                    ),
-                  )
-                ],
-              ),
-            ],
-          ),
+      appBar: AppBar(
+        backgroundColor: Colors.black,
+        title: Text(
+          'iCodegram',
+          style: TextStyle(
+              fontFamily: 'Lobster',
+              color: Colors.white,
+              fontSize: 25.6,
+              fontWeight: FontWeight.w400),
         ),
+      ),
+      body: ListView(
+        scrollDirection: Axis.horizontal,
+        children: [
+          AddStory(),
+          SizedBox(
+            width: 86 * 5,
+            height: 130,
+            child: ListView.builder(
+                scrollDirection: Axis.horizontal,
+                itemCount: 8,
+                itemBuilder: (context, index) {
+                  return WatchStory(name: 'PoTaTo47');
+                }),
+          )
+        ],
       ),
     );
   }
