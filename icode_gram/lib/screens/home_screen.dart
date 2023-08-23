@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:icode_gram/component/story/add_story.dart';
+import 'package:icode_gram/screens/story/add_story.dart';
 
-import '../component/story/watch_story.dart';
+import 'story/watch_story.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});

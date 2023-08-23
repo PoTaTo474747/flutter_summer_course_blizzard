@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:icode_gram/layouts/screen_layout.dart';
 import 'package:icode_gram/screens/home_screen.dart';
 
 import 'package:firebase_core/firebase_core.dart';
@@ -12,6 +13,6 @@ void main() async {
       scaffoldBackgroundColor: Color.fromRGBO(0, 0, 0, 1),
       textTheme: Typography().white.apply(fontFamily: 'Rubik'),
     ),
-    home: HomeScreen(),
+    home: ScreenLayout(),
   ));
 }
