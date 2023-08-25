@@ -31,32 +31,17 @@ class _SignUpState extends State<SignUp> {
     _rePasswordController.dispose();
   }
 
+  selectImage() async {
+    Uint8List image = await pickImage(ImageSource.gallery);
+    setState(
+      () {
+        _image = image;
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
-    Stack(
-      children: [
-        _image != null
-            ? CircleAvatar(radius: 64, backgroundImage: MemoryImage(_image!))
-            : CircleAvatar(
-                radius: 64,
-                backgroundImage: NetworkImage(
-                    'https://toppng.com/uploads/preview/instagram-default-profile-picture-11562973083brycehrmyv.png'),
-              ),
-        Positioned(
-            bottom: -10,
-            left: 80,
-            child: IconButton(
-                icon: Icon(Icons.add_a_photo),
-                onPressed: () {
-                  void selectImage() async {
-                    Uint8List image = await pickImage(ImageSource.gallery);
-                    setState(() {
-                      _image = image;
-                    });
-                  }
-                }))
-      ],
-    );
     return Scaffold(
       backgroundColor: Colors.black,
       body: SafeArea(
@@ -78,6 +63,31 @@ class _SignUpState extends State<SignUp> {
                   fontSize: 35.5,
                   fontWeight: FontWeight.w400,
                 ),
+              ),
+              SizedBox(
+                height: 25,
+              ),
+              Stack(
+                children: [
+                  _image != null
+                      ? CircleAvatar(
+                          radius: 64, backgroundImage: MemoryImage(_image!))
+                      : CircleAvatar(
+                          radius: 64,
+                          backgroundImage: NetworkImage(
+                              'https://toppng.com/uploads/preview/instagram-default-profile-picture-11562973083brycehrmyv.png'),
+                        ),
+                  Positioned(
+                    bottom: -10,
+                    left: 80,
+                    child: IconButton(
+                      icon: Icon(Icons.add_a_photo),
+                      onPressed: () {
+                        selectImage();
+                      },
+                    ),
+                  ),
+                ],
               ),
               SizedBox(
                 height: 25,
@@ -138,11 +148,11 @@ class _SignUpState extends State<SignUp> {
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.all(Radius.circular(4)),
                       ),
-                      color: Colors.blue),
+                      color: Colors.orange),
                 ),
               ),
               SizedBox(
-                height: 12,
+                height: 90,
               ),
               Flexible(
                 child: Container(),
