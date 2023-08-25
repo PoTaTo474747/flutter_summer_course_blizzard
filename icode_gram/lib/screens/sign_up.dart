@@ -1,7 +1,11 @@
+import 'dart:typed_data';
+
 import 'package:flutter/material.dart';
 import 'package:icode_gram/resources/auth_method.dart';
+import 'package:image_picker/image_picker.dart';
 
 import '../component/text_field.dart';
+import '../untils/untils.dart';
 import 'login_screen.dart';
 
 class SignUp extends StatefulWidget {
@@ -16,7 +20,7 @@ class _SignUpState extends State<SignUp> {
   final TextEditingController _userController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
   final TextEditingController _rePasswordController = TextEditingController();
-  // Uint8List? _image;
+  Uint8List? _image;
 
   @override
   void dispose() {
@@ -25,18 +29,34 @@ class _SignUpState extends State<SignUp> {
     _emailController.dispose();
     _userController.dispose();
     _rePasswordController.dispose();
-
   }
 
   @override
   Widget build(BuildContext context) {
     Stack(
       children: [
-        // _image!=null
-
+        _image != null
+            ? CircleAvatar(radius: 64, backgroundImage: MemoryImage(_image!))
+            : CircleAvatar(
+                radius: 64,
+                backgroundImage: NetworkImage(
+                    'https://toppng.com/uploads/preview/instagram-default-profile-picture-11562973083brycehrmyv.png'),
+              ),
+        Positioned(
+            bottom: -10,
+            left: 80,
+            child: IconButton(
+                icon: Icon(Icons.add_a_photo),
+                onPressed: () {
+                  void selectImage() async {
+                    Uint8List image = await pickImage(ImageSource.gallery);
+                    setState(() {
+                      _image = image;
+                    });
+                  }
+                }))
       ],
-
-  );
+    );
     return Scaffold(
       backgroundColor: Colors.black,
       body: SafeArea(
@@ -106,7 +126,8 @@ class _SignUpState extends State<SignUp> {
                   AuthMethods().signUpUser(
                       email: _emailController.text,
                       password: _passwordController.text,
-                      username: _userController.text, file: null)
+                      username: _userController.text,
+                      file: null)
                 },
                 child: Container(
                   width: double.infinity,
