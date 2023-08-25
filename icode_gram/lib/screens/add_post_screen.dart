@@ -9,7 +9,7 @@ class AddPostScreen extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Center(
-          child: Text('Home Screen'),
+          child: Text('HomeScreen'),
         ),
       ),
     );
