@@ -16,6 +16,7 @@ class _SignUpState extends State<SignUp> {
   final TextEditingController _userController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
   final TextEditingController _rePasswordController = TextEditingController();
+  // Uint8List? _image;
 
   @override
   void dispose() {
@@ -24,10 +25,18 @@ class _SignUpState extends State<SignUp> {
     _emailController.dispose();
     _userController.dispose();
     _rePasswordController.dispose();
+
   }
 
   @override
   Widget build(BuildContext context) {
+    Stack(
+      children: [
+        // _image!=null
+
+      ],
+
+  );
     return Scaffold(
       backgroundColor: Colors.black,
       body: SafeArea(
@@ -97,7 +106,7 @@ class _SignUpState extends State<SignUp> {
                   AuthMethods().signUpUser(
                       email: _emailController.text,
                       password: _passwordController.text,
-                      username: _userController.text)
+                      username: _userController.text, file: null)
                 },
                 child: Container(
                   width: double.infinity,

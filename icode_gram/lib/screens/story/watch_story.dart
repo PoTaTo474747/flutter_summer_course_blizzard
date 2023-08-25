@@ -22,7 +22,7 @@ class _WatchStoryState extends State<WatchStory> {
               height: 80,
               width: 80,
               child: ClipOval(
-                child: Image.asset('assets/images/story.png'),
+                child: Image.asset('assets/images/Inner.png'),
               ),
             ),
             const SizedBox(

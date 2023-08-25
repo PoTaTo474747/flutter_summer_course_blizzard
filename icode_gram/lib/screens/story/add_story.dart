@@ -11,14 +11,14 @@ class _AddStoryState extends State<AddStory> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 86,
-      height: 94,
+      width: 85,
+      height: 104,
       child: SingleChildScrollView(
         child: Column(
           children: [
             Container(
-              width: 70,
-              height: 70,
+              width: 80,
+              height: 80,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.all(Radius.circular(50)),
                   border: Border.all(color: Colors.white, width: 2)),
