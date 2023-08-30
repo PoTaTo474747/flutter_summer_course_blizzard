@@ -32,7 +32,8 @@ class _SignUpState extends State<SignUp> {
   }
 
   selectImage() async {
-    Uint8List image = await pickImage(ImageSource.gallery);
+    Uint8List image = await
+    pickImage(ImageSource.gallery);
     setState(
       () {
         _image = image;
